@@ -54,13 +54,13 @@ function ContinuousGene.new(parameterDictionary)
 
 end
 
-function ContinuousGene:mutate(ignoreChance)
+function ContinuousGene:mutate(forceMutate)
+	
+	if (not forceMutate) and (self.mutationChance <= mathRandom()) then return end
+		
+	local mutationValue = self.mutationStandardDeviation * mathSqrt(-2 * mathLog(mathRandom())) * mathCos(2 * mathPi * mathRandom())
 
-	if (self.mutationChance <= mathRandom()) then return end
-
-	local noise = self.mutationStandardDeviation * mathSqrt(-2 * mathLog(mathRandom())) * mathCos(2 * mathPi * mathRandom())
-
-	self.value = self.value + noise
+	self.value = self.value + mutationValue
 
 end
 
