@@ -37,18 +37,22 @@ function DiscreteGene.new(parameterDictionary)
 	local self = setmetatable({}, DiscreteGene)
 
 	local value = parameterDictionary.value or parameterDictionary[1] or 0
+	
+	local mutationChance = parameterDictionary.mutationChance or parameterDictionary[2] or 0
 
 	local mutationChoiceArray =  parameterDictionary.mutationChoiceArray or parameterDictionary[3] or {value}
-
+	
 	local numberOfMutationChoices = #mutationChoiceArray
+	
+	local mutationWeightArray = parameterDictionary.mutationWeightArray or parameterDictionary[4] or table.create(numberOfMutationChoices, 1)
 
 	self.value = value
 
-	self.mutationChance = parameterDictionary.mutationChance or parameterDictionary[2] or 0
+	self.mutationChance = mutationChance
 
 	self.mutationChoiceArray = mutationChoiceArray
 
-	self.mutationWeightArray = parameterDictionary.mutationWeightArray or parameterDictionary[4] or table.create(numberOfMutationChoices, 1)
+	self.mutationWeightArray = mutationWeightArray
 
 	return self
 
