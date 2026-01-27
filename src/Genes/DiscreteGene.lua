@@ -54,9 +54,9 @@ function DiscreteGene.new(parameterDictionary)
 
 end
 
-function DiscreteGene:mutate(ignoreChance)
+function DiscreteGene:mutate(forceMutate)
 
-	if (self.mutationChance <= mathRandom()) then return end
+	if (not forceMutate) and (self.mutationChance <= mathRandom()) then return end
 
 	local mutationChoiceArray = self.mutationChoiceArray
 	
