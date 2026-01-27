@@ -68,7 +68,11 @@ function Chromosome:__tostring()
 	
 	local stringText = "{"
 	
-	for i, Gene in ipairs(self.geneArray) do stringText = stringText .. tostring(Gene) .. (i < #self.geneArray and " " or "") end
+	local geneArray = self.geneArray
+	
+	local numberOfGenes = #geneArray
+	
+	for i, Gene in ipairs(geneArray) do stringText = stringText .. Gene .. (i < #numberOfGenes and " " or "") end
 	
 	stringText = stringText .. "}"
 	
