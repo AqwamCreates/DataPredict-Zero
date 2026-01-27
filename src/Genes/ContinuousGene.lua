@@ -64,4 +64,10 @@ function ContinuousGene:mutate(forceMutate)
 
 end
 
+function ContinuousGene:__tostring()
+	
+	return tostring(self.value)
+	
+end
+
 return ContinuousGene
