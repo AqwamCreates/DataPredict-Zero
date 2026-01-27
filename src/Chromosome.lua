@@ -63,5 +63,17 @@ function Chromosome:activate()
 	return self.activationFunction(table.unpack(valueArray))
 	
 end
+
+function Chromosome:__tostring()
+	
+	local stringText = "{"
+	
+	for i, Gene in ipairs(self.geneArray) do stringText = stringText .. tostring(Gene) .. (i < #self.geneArray and " " or "") end
+	
+	stringText = stringText .. "}"
+	
+	return stringText
+	
+end
 	
 return Chromosome
