@@ -26,6 +26,8 @@
 
 --]]
 
+local mathRandom = math.random
+
 local DiscreteGene = {}
 
 function DiscreteGene.new(parameterDictionary)
@@ -54,7 +56,7 @@ end
 
 function DiscreteGene:mutate(ignoreChance)
 
-	if (self.mutationChance <= math.random()) then return end
+	if (self.mutationChance <= mathRandom()) then return end
 
 	local mutationChoiceArray = self.mutationChoiceArray
 	
@@ -64,7 +66,7 @@ function DiscreteGene:mutate(ignoreChance)
 
 	for _, weight in ipairs(mutationWeightArray) do totalWeight = totalWeight + weight end
 
-	local randomPoint = math.random() * totalWeight
+	local randomPoint = mathRandom() * totalWeight
 
 	local accumulatedWeight = 0
 
