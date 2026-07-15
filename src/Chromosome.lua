@@ -92,11 +92,11 @@ function Chromosome.new(parameterDictionary)
 
 	local self = setmetatable({}, Chromosome)
 
-	local geneArray = parameterDictionary.geneArray or parameterDictionary[1] or {}
+	local geneArray = parameterDictionary.geneArray or {}
 	
-	local activationFunction = parameterDictionary.activationFunction or parameterDictionary[2] or function(...) return ... end
+	local activationFunction = parameterDictionary.activationFunction or defaultActivationFunction
 	
-	local mutationChance = parameterDictionary.mutationChance or parameterDictionary[3] or 0
+	local mutationChance = parameterDictionary.mutationChance or 0
 
 	return self
 
