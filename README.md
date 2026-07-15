@@ -1,6 +1,6 @@
 # DataPredict™ Genetics
 
-![DataPredict Genetics Icon](icons/DataPredictGeneticIcon.png)
+![DataPredict Evolution Icon](icons/DataPredictEvolutionIcon.png)
 
 --------------------------------------------------------------------
 
@@ -14,7 +14,7 @@
 
 --------------------------------------------------------------------
 
-Aqwam's Genetic Evolution Library (Aqwam-GEL)
+Aqwam's Evolution Library (Aqwam-EL)
 
 Author: Aqwam Harish Aiman
 	
