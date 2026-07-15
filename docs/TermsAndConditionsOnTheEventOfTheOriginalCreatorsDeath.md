@@ -2,7 +2,7 @@
 
 ## License
 
-These terms and conditions (“Agreement”) is a legal agreement between Aqwam Harish Aiman recognised as “Creator” and everyone involving the DataPredict Evolution Library (or formerly known as Aqwam’s Evolution Library) (“Library”) within this terms and conditions.
+These terms and conditions (“Agreement”) is a legal agreement between Aqwam Harish Aiman recognised as “Creator” and everyone involving the DataPredict Zero Library (or formerly known as Aqwam’s Derivative-Free Optimization Library) (“Library”) within this terms and conditions.
 
 ## Defintions
 
