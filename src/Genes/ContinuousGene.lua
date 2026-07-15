@@ -26,6 +26,9 @@
 
 --]]
 
+local BaseGene = require(script.Parent.BaseGene)
+
+
 local mathRandom = math.random
 
 local mathSqrt = math.sqrt
@@ -38,19 +41,27 @@ local mathPi = math.pi
 
 local ContinuousGene = {}
 
+ContinuousGene.__index = ContinuousGene
+
 function ContinuousGene.new(parameterDictionary)
 
 	parameterDictionary = parameterDictionary or {}
 
-	local self = setmetatable({}, ContinuousGene)
+	local value = parameterDictionary.value or 0
+	
+	local mutationChance = parameterDictionary.mutationChance or 0
+	
+	local mutationStandardDeviation = parameterDictionary.mutationStandardDeviation or 1
+	
+	parameterDictionary.type = "Continuous"
+	
+	local NewContinuousGene = BaseGene.new(parameterDictionary)
 
-	self.value = parameterDictionary.value or parameterDictionary[1] or 0
+	setmetatable(NewContinuousGene, ContinuousGene)
 
-	self.mutationChance = parameterDictionary.mutationChance or parameterDictionary[2] or 0
+	NewContinuousGene.mutationStandardDeviation = mutationStandardDeviation
 
-	self.mutationStandardDeviation = parameterDictionary.mutationStandardDeviation or parameterDictionary[3] or 1
-
-	return self
+	return NewContinuousGene
 
 end
 
@@ -62,12 +73,6 @@ function ContinuousGene:mutate(forceMutate)
 
 	self.value = self.value + mutationValue
 
-end
-
-function ContinuousGene:__tostring()
-	
-	return tostring(self.value)
-	
 end
 
 return ContinuousGene
