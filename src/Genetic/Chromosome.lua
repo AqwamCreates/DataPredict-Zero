@@ -2,7 +2,7 @@
 
 	--------------------------------------------------------------------
 
-	Aqwam's Genetic Evolution Library (DataPredict Genetics)
+	Aqwam's Evolution Library (DataPredict Evolution)
 
 	Author: Aqwam Harish Aiman
 	
