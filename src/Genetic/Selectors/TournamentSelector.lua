@@ -34,8 +34,6 @@ local TournamentSelector = {}
 
 TournamentSelector.__index = TournamentSelector
 
-TournamentSelector.__index = TournamentSelector
-
 function TournamentSelector.new(parameterDictionary)
 	
 	parameterDictionary = parameterDictionary or {}
