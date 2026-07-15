@@ -83,6 +83,7 @@ function TournamentSelector:select(ChromosomeAndScoreDictionaryArray)
 	end
 	
 	return BestChromosome
+	
 end
 
 return TournamentSelector
