@@ -88,9 +88,9 @@ function RouletteWheelSelector:select(ChromosomeAndScoreDictionaryArray)
 
 	if (totalFitness == 0) then
 		
-		local randomIndex = mathRandom(1, numberOfChromosomes)
+		local randomArrayIndex = mathRandom(1, numberOfChromosomes)
 		
-		local ChromosomeAndScoreDictionary = ChromosomeAndScoreDictionaryArray[randomIndex]
+		local ChromosomeAndScoreDictionary = ChromosomeAndScoreDictionaryArray[randomArrayIndex]
 		
 		local Chromosome = ChromosomeAndScoreDictionary.Chromosome
 		
