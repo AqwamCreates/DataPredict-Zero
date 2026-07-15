@@ -42,6 +42,8 @@ local ContinuousGene = {}
 
 ContinuousGene.__index = ContinuousGene
 
+setmetatable(ContinuousGene, BaseGene)
+
 function ContinuousGene.new(parameterDictionary)
 
 	parameterDictionary = parameterDictionary or {}
