@@ -50,7 +50,7 @@ end
 
 function BaseGene:__tostring()
 	
-	return tostring("Type: " .. self.type .. " Value: " .. self.value)
+	return tostring("Gene Type: " .. self.type .. " Value: " .. self.value)
 	
 end
 
