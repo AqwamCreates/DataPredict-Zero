@@ -30,8 +30,6 @@ local BaseSelector = require(script.Parent.BaseSelector)
 
 local mathRandom = math.random
 
-local mathAbs = math.abs
-
 local RandomSelector = {}
 
 RandomSelector.__index = RandomSelector
