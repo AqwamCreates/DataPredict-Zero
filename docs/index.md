@@ -34,11 +34,13 @@ In addition, if you are interested in Roblox tutorials and future projects by me
 
 ### Repository
 
+* [DataPredict Zero Library](https://github.com/AqwamCreates/DataPredict-Zero)
+
+* [DataPredict Library](https://github.com/AqwamCreates/DataPredict)
+
 * [DataPredict Axon Library](https://github.com/AqwamCreates/DataPredict-Axon)
 
 * [DataPredict Neural Library](https://github.com/AqwamCreates/DataPredict-Neural)
-
-* [DataPredict Library](https://github.com/AqwamCreates/DataPredict)
 
 * [TensorL Library](https://github.com/AqwamCreates/TensorL)
 
