@@ -30,6 +30,8 @@ local mathRandom = math.random
 
 local Chromosome = {}
 
+Chromosome.__index = Chromosome
+
 local function defaultActivationFunction(valueArray, environmentArray)
 
 	local activationValue = 0
@@ -89,16 +91,18 @@ end
 function Chromosome.new(parameterDictionary)
 
 	parameterDictionary = parameterDictionary or {}
-
-	local self = setmetatable({}, Chromosome)
-
-	local geneArray = parameterDictionary.geneArray or {}
 	
-	local activationFunction = parameterDictionary.activationFunction or defaultActivationFunction
-	
-	local mutationChance = parameterDictionary.mutationChance or 0
+	local NewChromosome = {}
 
-	return self
+	setmetatable(NewChromosome, Chromosome)
+
+	NewChromosome.geneArray = parameterDictionary.geneArray or {}
+	
+	NewChromosome.activationFunction = parameterDictionary.activationFunction or defaultActivationFunction
+	
+	NewChromosome.mutationChance = parameterDictionary.mutationChance or 0
+
+	return NewChromosome
 
 end
 
@@ -168,6 +172,16 @@ function Chromosome:__tostring()
 	
 	return stringText
 	
+end
+
+function Chromosome:destroy()
+
+	table.clear(self)
+
+	setmetatable(self, nil)
+
+	self = nil
+
 end
 	
 return Chromosome
