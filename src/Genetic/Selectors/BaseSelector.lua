@@ -46,7 +46,7 @@ end
 
 function BaseSelector:__tostring()
 
-	return tostring("Type: " .. self.type)
+	return tostring("Selector Type: " .. self.type)
 
 end
 
