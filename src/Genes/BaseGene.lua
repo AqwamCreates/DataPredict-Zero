@@ -28,19 +28,23 @@
 
 local BaseGene = {}
 
+BaseGene.__index = BaseGene
+
 function BaseGene.new(parameterDictionary)
 
 	parameterDictionary = parameterDictionary or {}
-
-	local self = setmetatable({}, BaseGene)
-
-	self.value = parameterDictionary.value or 0
 	
-	self.type = parameterDictionary.type or "Base"
+	local NewBaseGene = {}
 
-	self.mutationChance = parameterDictionary.mutationChance or 0
+	setmetatable(NewBaseGene, BaseGene)
 
-	return self
+	NewBaseGene.value = parameterDictionary.value or 0
+	
+	NewBaseGene.type = parameterDictionary.type or "Base"
+
+	NewBaseGene.mutationChance = parameterDictionary.mutationChance or 0
+
+	return NewBaseGene
 
 end
 
