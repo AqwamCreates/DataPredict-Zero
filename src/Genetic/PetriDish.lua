@@ -54,7 +54,7 @@ function PetriDish.new(parameterDictionary)
 	
 	NewPetriDish.crossoverRate = parameterDictionary.crossoverRate or 0.5
 	
-	NewPetriDish.Selector = parameterDictionary.Selector or Selectors.TournamentSelector.new()
+	NewPetriDish.Selector = parameterDictionary.Selector or Selectors.RandomSelector.new()
 	
 	NewPetriDish.reuseElites = parameterDictionary.reuseElites or false
 
