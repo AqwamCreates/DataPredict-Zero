@@ -26,25 +26,35 @@
 
 --]]
 
-local AqwamEvolutionLibrary = {}
+local AqwamDerivativeFreeOptimizationLibrary = {}
+
+local Core = script.Core
+
+local Genes = Core.Genes
 
 local Genetic = script.Genetic
 
-local Genes = Genetic.Genes
-
 local Selectors = Genetic.Selectors
 
-AqwamEvolutionLibrary.Genetic = {
+local SimulatedAnnealing = script.SimulatedAnnealing
 
+AqwamDerivativeFreeOptimizationLibrary.Core = {
+	
 	Genes = {
 
 		ContinuousGene = require(Genes.ContinuousGene),
-		
+
 		IntegerGene = require(Genes.IntegerGene),
 
 		DiscreteGene = require(Genes.DiscreteGene),
 
 	},
+	
+	Chromosome = require(Core.Chromosome),
+	
+}
+
+AqwamDerivativeFreeOptimizationLibrary.Genetic = {
 	
 	Selectors = {
 		
@@ -58,10 +68,14 @@ AqwamEvolutionLibrary.Genetic = {
 		
 	},
 	
-	Chromosome = require(Genetic.Chromosome),
-	
 	PetriDish = require(Genetic.PetriDish),
 
 }
 
-return AqwamEvolutionLibrary
+AqwamDerivativeFreeOptimizationLibrary.SimulatedAnnealing = {
+	
+	Annealer = require(SimulatedAnnealing.Annealer),
+	
+}
+
+return AqwamDerivativeFreeOptimizationLibrary
