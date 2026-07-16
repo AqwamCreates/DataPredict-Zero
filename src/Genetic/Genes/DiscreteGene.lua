@@ -43,6 +43,8 @@ local mutationModeFunctionList = {
 		local totalWeight = 0
 
 		for _, weight in ipairs(mutationWeightArray) do totalWeight = totalWeight + weight end
+		
+		if (totalWeight == 0) then return mathRandom(#mutationWeightArray) end
 
 		local randomPoint = mathRandom() * totalWeight
 
@@ -67,6 +69,8 @@ local mutationModeFunctionList = {
 		local totalWeight = 0
 
 		for _, weight in ipairs(mutationWeightArray) do totalWeight = totalWeight + weight end
+		
+		if (totalWeight == 0) then return mathRandom(numberOfMutationWeights) end
 
 		local randomPoint = mathRandom() * totalWeight
 
@@ -135,6 +139,8 @@ local mutationModeFunctionList = {
 		local totalWeight = 0
 
 		for _, weight in ipairs(neighbourWeightArray) do totalWeight = totalWeight + weight end
+		
+		if (totalWeight == 0) then return mathRandom(#neighbourWeightArray) end
 
 		local randomPoint = mathRandom() * totalWeight
 
