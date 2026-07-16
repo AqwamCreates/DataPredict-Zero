@@ -88,6 +88,8 @@ function Particle.new(parameterDictionary)
 	
 	local bestPositionArray = tableClone(parameterDictionary.bestPositionArray) or {}
 	
+	local bestScore = parameterDictionary.bestScore or -mathHuge
+	
 	local NewParticle = {}
 
 	setmetatable(NewParticle, Particle)
@@ -112,7 +114,7 @@ function Particle.new(parameterDictionary)
 	
 	NewParticle.bestPositionArray = bestPositionArray
 	
-	NewParticle.bestScore = -mathHuge
+	NewParticle.bestScore = bestScore
 
 	return NewParticle
 
