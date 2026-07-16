@@ -29,7 +29,7 @@ function Annealer.new(parameterDictionary)
 	
 	local coolingRate = parameterDictionary.coolingRate or 0.95
 	
-	local minimumTemperature = parameterDictionary.minimumTemperature or 1e-8
+	local minimumTemperature = parameterDictionary.minimumTemperature or 0
 	
 	local NewAnnealer = {}
 
