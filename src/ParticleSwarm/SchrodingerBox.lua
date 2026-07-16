@@ -100,7 +100,7 @@ function SchrodingerBox.new(parameterDictionary)
 	
 	NewSchrodingerBox.dimensionSize = dimensionSize
 	
-	NewSchrodingerBox.defaultEvaluateFunction = evaluateFunction
+	NewSchrodingerBox.evaluateFunction = evaluateFunction
 	
 	NewSchrodingerBox.inertiaCoefficientArray = inertiaCoefficientArray
 	
@@ -146,7 +146,9 @@ function SchrodingerBox:observe(environmentArray)
 
 	for _, Particle in ipairs(ParticleArray) do
 		
-		local score = evaluateFunction(Particle.positionArray, environmentArray)
+		local positionArray = Particle:getPositionArray()
+		
+		local score = evaluateFunction(positionArray, environmentArray)
 
 		if (Particle:record(score)) then
 
