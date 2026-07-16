@@ -50,6 +50,8 @@ AqwamDerivativeFreeOptimizationLibrary.Core = {
 
 	},
 	
+	Particle = require(Core.Particle),
+	
 	Chromosome = require(Core.Chromosome),
 	
 }
