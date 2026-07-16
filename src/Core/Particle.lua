@@ -128,7 +128,7 @@ function Particle.new(parameterDictionary)
 
 end
 
-function Particle:applyImpulse(inertiaArray, cognitiveArray, socialArray)
+function Particle:guide(inertiaArray, cognitiveArray, socialArray)
 	
 	local dimensionSize = self.dimensionSize
 	
