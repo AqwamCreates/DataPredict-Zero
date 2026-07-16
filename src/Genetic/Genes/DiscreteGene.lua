@@ -108,26 +108,26 @@ local mutationModeFunctionList = {
 		
 		local numberOfMutationWeights = #mutationWeightArray
 
-		local arrayIndexMinusOne = arrayIndex - 1
+		local arrayIndexMinusOne = arrayIndex - stepSize
 
-		local arrayIndexPlusOne = arrayIndex + 1
+		local arrayIndexPlusOne = arrayIndex + stepSize
 
 		local neighbourIndexArray = {}
 
 		local neighbourWeightArray = {}
 
-		if (arrayIndex > 1) then
+		if (arrayIndex > stepSize) then
 
 			table.insert(neighbourIndexArray, arrayIndexMinusOne)
 
 			table.insert(neighbourWeightArray, mutationWeightArray[arrayIndexMinusOne])
 
 		end
-
+		
 		table.insert(neighbourIndexArray, arrayIndex)
 
 		table.insert(neighbourWeightArray, mutationWeightArray[arrayIndex])
-
+		
 		if (arrayIndex < numberOfMutationWeights) then
 
 			table.insert(neighbourIndexArray, arrayIndexPlusOne)
