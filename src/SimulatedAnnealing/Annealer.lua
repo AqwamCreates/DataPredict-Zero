@@ -11,7 +11,7 @@ local Annealer = {}
 
 Annealer.__index = Annealer
 
-local function defaultEvaluationFunction(Chromosome, environmentArray)
+local function defaultEvaluateFunction(Chromosome, environmentArray)
 
 	return Chromosome:activate(environmentArray)
 
@@ -23,7 +23,7 @@ function Annealer.new(parameterDictionary)
 	
 	local Chromosome = parameterDictionary.Chromosome
 	
-	local evaluateFunction = parameterDictionary.evaluateFunction or defaultEvaluationFunction
+	local evaluateFunction = parameterDictionary.evaluateFunction or defaultEvaluateFunction
 	
 	local initialTemperature = parameterDictionary.initialTemperature or 100 -- A reference to the chromosome's annealing temperature.
 	

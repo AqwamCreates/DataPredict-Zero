@@ -38,7 +38,7 @@ local SchrodingerBox = {}
 
 SchrodingerBox.__index = SchrodingerBox
 
-local function defaultEvaluationFunction(positionArray, environmentArray)
+local function defaultEvaluateFunction(positionArray, environmentArray)
 	
 	local score = 0
 
@@ -68,7 +68,7 @@ function SchrodingerBox.new(parameterDictionary)
 	
 	local dimensionSize = parameterDictionary.dimensionSize or 1
 	
-	local evaluateFunction = parameterDictionary.evaluateFunction or defaultEvaluationFunction
+	local evaluateFunction = parameterDictionary.evaluateFunction or defaultEvaluateFunction
 	
 	local inertiaCoefficientArray = parameterDictionary.inertiaCoefficientArray or table.create(dimensionSize, 0)
 	
