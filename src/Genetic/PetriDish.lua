@@ -52,7 +52,7 @@ function PetriDish.new(parameterDictionary)
 
 	NewPetriDish.eliteCount = parameterDictionary.eliteCount or 1
 	
-	NewPetriDish.crossoverChance = parameterDictionary.crossoverChance or 0.5
+	NewPetriDish.crossoverProbability = parameterDictionary.crossoverProbability or 0.5
 	
 	NewPetriDish.Selector = parameterDictionary.Selector or require(Selectors.RandomSelector).new()
 	
@@ -74,7 +74,7 @@ function PetriDish:cultivate(ChromosomeArray, scoreArray)
 	
 	local eliteCount = self.eliteCount
 	
-	local crossoverChance = self.crossoverChance
+	local crossoverProbability = self.crossoverProbability
 	
 	local Selector = self.Selector
 	
@@ -118,7 +118,7 @@ function PetriDish:cultivate(ChromosomeArray, scoreArray)
 
 		local ParentChromosomeB = Selector:select(ChromosomeAndScoreDictionaryArray)
 
-		local ChildA, ChildB = ParentChromosomeA:crossover(ParentChromosomeB, crossoverChance)
+		local ChildA, ChildB = ParentChromosomeA:crossover(ParentChromosomeB, crossoverProbability)
 		
 		if (remainingPopulationCountToAdd >= 2) then
 			
