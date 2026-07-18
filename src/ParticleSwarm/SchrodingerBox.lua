@@ -60,11 +60,11 @@ function SchrodingerBox.new(parameterDictionary)
 	
 	local ParticleArray = parameterDictionary.ParticleArray or {}
 	
-	local particleCount = parameterDictionary.particleCount or 100
+	local populationSize = parameterDictionary.populationSize or 100
 	
-	local particleCountInArray = #ParticleArray
+	local numberOfParticlesInArray = #ParticleArray
 	
-	if (particleCountInArray > 0) then particleCount = particleCountInArray end
+	if (numberOfParticlesInArray > 0) then populationSize = numberOfParticlesInArray end
 	
 	local dimensionSize = parameterDictionary.dimensionSize or 1
 	
@@ -88,7 +88,7 @@ function SchrodingerBox.new(parameterDictionary)
 
 	setmetatable(NewSchrodingerBox, SchrodingerBox)
 	
-	for i = 1, particleCount, 1 do
+	for i = 1, populationSize, 1 do
 		
 		ParticleArray[i] = ParticleArray[i] or Particle.new({dimensionSize = dimensionSize})
 		
@@ -96,7 +96,7 @@ function SchrodingerBox.new(parameterDictionary)
 	
 	NewSchrodingerBox.ParticleArray = ParticleArray
 	
-	NewSchrodingerBox.particleCount = particleCount
+	NewSchrodingerBox.populationSize = populationSize
 	
 	NewSchrodingerBox.dimensionSize = dimensionSize
 	
