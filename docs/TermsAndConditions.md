@@ -2,7 +2,7 @@
 
 ## License
 
-These terms and conditions (“Agreement”) is a legal agreement between you (or company or organization) recognized as “User” and Aqwam Harish Aiman recognised as “Licensor” for the use of DataPredict Zero Library (or formerly known as Aqwam’s Derivative-Free Optimization Library) (“Library”) within these terms and conditions. By using the Library, User agrees to be bound by the terms of this Agreement.
+These terms and conditions (“Agreement”) is a legal agreement between you (or company or organization) recognized as “User” and Aqwam Harish Aiman recognised as “Licensor” for the use of DataPredict Zero Library (or formerly known as Aqwam’s Derivative-Free Optimization Library) (“Library”) within these terms and conditions. By using the Library, User agrees to be bound by the terms and conditions of this Agreement.
 
 ## Definitions
 
